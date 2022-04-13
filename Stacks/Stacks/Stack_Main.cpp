@@ -45,7 +45,7 @@ int main()
 	S.Push('h');
     S.Push('i');
 	S.Push('j');
-
+	S.Pop();
 
 	
 
