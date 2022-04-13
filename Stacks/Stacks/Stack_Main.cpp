@@ -43,6 +43,8 @@ int main()
 	S.Push('f');
 	S.Push('g');
 	S.Push('h');
+    S.Push('i');
+
 
 
 	
