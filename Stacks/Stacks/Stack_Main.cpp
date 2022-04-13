@@ -13,6 +13,8 @@ int main()
 	S.Push('d');
 	S.Push('f');
 	S.Push('g');
+	S.Push('h');
+	S.Push('i');
 
 	cout<<"top= "<<S.Top()<<endl;
 
