@@ -11,6 +11,8 @@ int main()
 	S.Push('c');
 	S.Push('e');
 	S.Push('d');
+	S.Push('f');
+	S.Push('g');
 
 	cout<<"top= "<<S.Top()<<endl;
 
