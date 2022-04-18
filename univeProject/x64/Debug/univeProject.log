@@ -1,2 +1,8 @@
-﻿  dbConnection.cpp
-C:\Users\DELL\Desktop\dbConnection.h(4,10): fatal error C1083: Cannot open include file: 'mysql_connection.h': No such file or directory
+﻿  Source.cpp
+C:\Users\abdel\Desktop\DS\univeProject\Source.cpp(7,2): error C2065: 'ticket': undeclared identifier
+C:\Users\abdel\Desktop\DS\univeProject\Source.cpp(7,9): error C2146: syntax error: missing ';' before identifier 't'
+C:\Users\abdel\Desktop\DS\univeProject\Source.cpp(7,9): error C2065: 't': undeclared identifier
+C:\Users\abdel\Desktop\DS\univeProject\Source.cpp(8,2): error C2065: 't': undeclared identifier
+  ticket.cpp
+C:\Users\abdel\Desktop\DS\univeProject\test.h(5,10): fatal error C1083: Cannot open include file: 'mysql_connection.h': No such file or directory
+  Generating Code...

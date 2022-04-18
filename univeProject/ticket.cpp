@@ -13,9 +13,11 @@ ticket::ticket(string passeneger_name, string boarding_point, string destination
 
 void ticket::addTicket()
 {
-	//string pn, bp, dp, dot;
+	string x;
 	cin >> passeneger_name >> boarding_point >> destination_point >> date_of_travel;
 	ticket t1 = ticket(passeneger_name, boarding_point, destination_point, date_of_travel);
-	test* passenger1 = new test();
-	passenger1->dbUpdate("insert into passengers(passenger_name, boarding_point, destination_point, date_of_travel) values('"+t1.passeneger_name+"', '"+t1.boarding_point+"', '"+t1.destination_point+"', '"+t1.date_of_travel+"');");
+	x = t1.passeneger_name;
+	cout <<x;
+	/*test* passenger1 = new test();
+	passenger1->dbUpdate("insert into passenger(passeneger_name, start_point, end_point, time_taken) values('"+t1.passeneger_name+"', '"+boarding_point+"', '"+destination_point+"', '"+date_of_travel+"');");*/
 }

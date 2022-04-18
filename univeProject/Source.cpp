@@ -1,7 +1,13 @@
-#include "ticket.h"
 #include<iostream>
+#include "ticket.h"
+
 using namespace std;
-int main() 
+int main()
 {
-	cout << "hello world";
+	ticket t;
+	t.addTicket();
+	
+	cout << "hallo world"<<endl;
+	system("pause");
+
 }
