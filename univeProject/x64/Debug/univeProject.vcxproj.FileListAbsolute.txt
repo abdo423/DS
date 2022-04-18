@@ -1,0 +1,4 @@
+C:\Users\DELL\Desktop\univeProject\x64\Debug\univeProject.MyForm.resources
+C:\Users\DELL\Desktop\univeProject\x64\Debug\univeProject.vcxproj.GenerateResource.cache
+C:\Users\DELL\Desktop\univeProject\x64\Debug\univeProject.exe
+C:\Users\DELL\Desktop\univeProject\x64\Debug\univeProject.vcxprojAssemblyReference.cache
