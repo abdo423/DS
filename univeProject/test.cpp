@@ -1,4 +1,6 @@
 #include "test.h"
+#include <msclr/marshal_cppstd.h>
+#include<string>
  test::test()
 {
 	try
@@ -21,7 +23,7 @@
 	}
 
 }
-void test::dbUpdate(string query) {
+void test::dbInsert(string query) {
 	try {
 		PreparedStatement* pstmt;
 		pstmt = con->prepareStatement(query);
@@ -34,17 +36,44 @@ void test::dbUpdate(string query) {
 }
 ResultSet* test::dbRetrieve(string query) {
 	try {
+	
 		ResultSet* result;
 		PreparedStatement* pstmt;
 		pstmt = con->prepareStatement(query);
 		result = pstmt->executeQuery();
-		return result;
+		while(result->next())
+		cout<<result->getString(1).c_str()<<endl;
+        return result;
 		delete result;
 		delete pstmt;
 	}
 	catch (SQLException e) {
 		cout << e.what() << endl;
 	}
+}
+bool test::dbCompare(string email, string pass,string query)
+{
+
+	ResultSet* result;
+	PreparedStatement* pstmt;
+	pstmt = con->prepareStatement(query);
+	result = pstmt->executeQuery();
+	
+	while (result->next())
+	{
+		
+	
+		if(result->getString(1).c_str() == email && result->getString(2).c_str() == pass)
+		{
+			
+			return true;
+			
+			
+			
+		}
+		
+	}
+	return false;
 }
 test::~test() {
 	delete con;

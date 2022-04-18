@@ -19,8 +19,9 @@ using namespace sql;
 		Connection* con;
 	public:
 		test();
-		void dbUpdate(string query);
+		void dbInsert(string query);
 		ResultSet* dbRetrieve(string query);
+		bool dbCompare(string email,string pass,string query);
 		~test();
 	
 };

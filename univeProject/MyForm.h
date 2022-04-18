@@ -429,7 +429,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	string g = msclr::interop::marshal_as<std::string>(testRaw);
 	String^ testhamada = textBox2->Text;
 	string h = msclr::interop::marshal_as<std::string>(testhamada);
-	t.dbUpdate("insert into passenger (passeneger_name,start_point) values(' " + g +  " ',' " + h + " ')");
+	t.dbInsert("insert into passenger (passeneger_name,start_point) values(' " + g +  " ',' " + h + " ')");
 	
 
 }
