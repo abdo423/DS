@@ -1,7 +1,5 @@
 ﻿  Source.cpp
-  MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-Source.obj : error LNK2005: "int __cdecl main(void)" (?main@@$$HYAHXZ) already defined in MyForm.obj
-Source.obj : error LNK2005: main already defined in MyForm.obj
+  Source.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
 mysqlcppconn-static.lib(mysql_art_resultset.obj) : warning LNK4099: PDB 'jdbc.pdb' was not found with 'mysqlcppconn-static.lib(mysql_art_resultset.obj)' or at 'C:\Users\abdel\Desktop\DS\univeProject\x64\Release\jdbc.pdb'; linking object as if no debug info
 mysqlcppconn-static.lib(mysql_connection.obj) : warning LNK4099: PDB 'jdbc.pdb' was not found with 'mysqlcppconn-static.lib(mysql_connection.obj)' or at 'C:\Users\abdel\Desktop\DS\univeProject\x64\Release\jdbc.pdb'; linking object as if no debug info
 mysqlcppconn-static.lib(mysql_util.obj) : warning LNK4099: PDB 'jdbc.pdb' was not found with 'mysqlcppconn-static.lib(mysql_util.obj)' or at 'C:\Users\abdel\Desktop\DS\univeProject\x64\Release\jdbc.pdb'; linking object as if no debug info
@@ -25,4 +23,4 @@ mysqlcppconn-static.lib(mysql_client_api.obj) : warning LNK4099: PDB 'jdbc.pdb' 
 mysqlcppconn-static.lib(mysql_native_connection_wrapper.obj) : warning LNK4099: PDB 'jdbc.pdb' was not found with 'mysqlcppconn-static.lib(mysql_native_connection_wrapper.obj)' or at 'C:\Users\abdel\Desktop\DS\univeProject\x64\Release\jdbc.pdb'; linking object as if no debug info
 mysqlcppconn-static.lib(mysql_native_resultset_wrapper.obj) : warning LNK4099: PDB 'jdbc.pdb' was not found with 'mysqlcppconn-static.lib(mysql_native_resultset_wrapper.obj)' or at 'C:\Users\abdel\Desktop\DS\univeProject\x64\Release\jdbc.pdb'; linking object as if no debug info
 mysqlcppconn-static.lib(mysql_native_statement_wrapper.obj) : warning LNK4099: PDB 'jdbc.pdb' was not found with 'mysqlcppconn-static.lib(mysql_native_statement_wrapper.obj)' or at 'C:\Users\abdel\Desktop\DS\univeProject\x64\Release\jdbc.pdb'; linking object as if no debug info
-C:\Users\abdel\Desktop\DS\univeProject\x64\Release\univeProject.exe : fatal error LNK1169: one or more multiply defined symbols found
+  univeProject.vcxproj -> C:\Users\abdel\Desktop\DS\univeProject\x64\Release\univeProject.exe

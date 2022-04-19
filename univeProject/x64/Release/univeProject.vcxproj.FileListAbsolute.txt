@@ -9,6 +9,4 @@ C:\Users\abdel\Desktop\univeProject\x64\Release\univeProject.vcxproj.GenerateRes
 C:\Users\abdel\Desktop\univeProject\x64\Release\univeProject.exe
 C:\Users\abdel\Desktop\DS\univeProject\x64\Release\univeProject.vcxproj.AssemblyReference.cache
 C:\Users\abdel\Desktop\DS\univeProject\x64\Release\univeProject.vcxproj.SuggestedBindingRedirects.cache
-C:\Users\abdel\Desktop\DS\univeProject\x64\Release\univeProject.MyForm.resources
-C:\Users\abdel\Desktop\DS\univeProject\x64\Release\univeProject.vcxproj.GenerateResource.cache
 C:\Users\abdel\Desktop\DS\univeProject\x64\Release\univeProject.exe
