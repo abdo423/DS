@@ -370,7 +370,7 @@ namespace univeProject {
 				static_cast<System::Byte>(0)));
 			this->textBox7->Location = System::Drawing::Point(379, 474);
 			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(761, 34);
+			this->textBox7->Size = System::Drawing::Size(425, 34);
 			this->textBox7->TabIndex = 24;
 			// 
 			// MyForm1
