@@ -1,13 +1,14 @@
 #include "test.h"
 #include <msclr/marshal_cppstd.h>
 #include<string>
+#include<vector>
  test::test()
 {
 	try
 	{
 		driver = get_driver_instance();
 		con = driver->connect(server, username, password);
-		con->setSchema("ds_trail");
+		con->setSchema("tsts");
 	}
 	catch (SQLException e)
 	{
@@ -23,6 +24,26 @@
 	}
 
 }
+
+
+ /*vector<ResultSet*> test::dbvector() {
+	 
+	 ResultSet* result;
+	 PreparedStatement* pstmt;
+	 pstmt = con->prepareStatement("SELECT * FROM test_train");
+	 result = pstmt->executeQuery();
+	 vector<ResultSet*> V;
+	 while (result->next())
+	 {
+		 v = result;
+
+	 }
+	 return v;
+ }*/
+
+
+
+
 void test::dbInsert(string query) {
 	try {
 		PreparedStatement* pstmt;
@@ -75,6 +96,10 @@ bool test::dbCompare(string email, string pass,string query)
 	}
 	return false;
 }
+
+
+
+
 test::~test() {
 	delete con;
 }
