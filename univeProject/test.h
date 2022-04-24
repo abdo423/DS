@@ -23,8 +23,9 @@ using namespace sql;
 		test();
 		void dbInsert(string query);
 		/*vector<ResultSet*> dbvector();*/
-		ResultSet* dbRetrieve(string query);
+		ticket dbRetrieve(string query);
 		bool dbCompare(string email,string pass,string query);
+		void view(string query);
 		~test();
 	
 };

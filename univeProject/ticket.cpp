@@ -20,3 +20,13 @@ void ticket::addTicket()
 	test* passenger1 = new test();
 	passenger1->dbInsert("insert into passenger(passeneger_name, start_point, end_point, time_taken) values('"+passeneger_name+"', '"+boarding_point+"', '"+destination_point+"', '"+date_of_travel+"');");
 }
+ticket ticket::displayTicket(string name)
+{
+	//passenger name
+	
+
+	test t;
+	ticket a=t.dbRetrieve("select * from passenger where passeneger_name = '"+name+"'");
+	return a;
+
+} 

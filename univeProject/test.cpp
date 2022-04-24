@@ -1,4 +1,5 @@
 #include "test.h"
+#include "ticket.h"
 #include <msclr/marshal_cppstd.h>
 #include<string>
 #include<vector>
@@ -55,18 +56,20 @@ void test::dbInsert(string query) {
 		cout << e.what() << endl;
 	}
 }
-ResultSet* test::dbRetrieve(string query) {
+ticket test::dbRetrieve(string query) {
 	try {
-	
-		ResultSet* result;
+       ResultSet* result;
 		PreparedStatement* pstmt;
 		pstmt = con->prepareStatement(query);
 		result = pstmt->executeQuery();
-		while(result->next())
-		cout<<result->getString(1).c_str()<<endl;
-        return result;
+		while (result->next())
+		{
+			ticket t = ticket(result->getString(1).c_str(), result->getString(2).c_str(), result->getString(3).c_str(), result->getString(4).c_str());
+			return t;
+		}
 		delete result;
 		delete pstmt;
+	
 	}
 	catch (SQLException e) {
 		cout << e.what() << endl;
@@ -97,7 +100,21 @@ bool test::dbCompare(string email, string pass,string query)
 	return false;
 }
 
-
+void test::view(string query)
+{
+	try
+	{
+		ResultSet* result;
+		PreparedStatement* pstmt;
+		pstmt = con->prepareStatement(query);
+		result = pstmt->executeQuery();
+		result->next();
+		cout << result->getString(1).c_str() << "*******" << result->getString(2).c_str() <<"*******"<< result->getString(3).c_str() << "" << result->getString(4).c_str();
+	}catch (SQLException e) {
+		cout << e.what() << endl;
+	}
+	
+}
 
 
 test::~test() {
