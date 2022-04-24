@@ -14,3 +14,5 @@ C:\Users\DELL\Desktop\DS\univeProject\x64\Release\univeProject.vcxprojAssemblyRe
 C:\Users\DELL\Desktop\DS\univeProject\x64\Release\univeProject.vcxproj.GenerateResource.cache
 C:\Users\DELL\Desktop\DS\univeProject\x64\Release\univeProject.exe
 C:\Users\DELL\Desktop\DS\univeProject\x64\Release\univeProject.MyForm1.resources
+C:\Users\abdel\Desktop\DS\univeProject\x64\Release\univeProject.MyForm1.resources
+C:\Users\abdel\Desktop\DS\univeProject\x64\Release\univeProject.vcxproj.GenerateResource.cache

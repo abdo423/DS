@@ -8,7 +8,7 @@
 	{
 		driver = get_driver_instance();
 		con = driver->connect(server, username, password);
-		con->setSchema("tsts");
+		con->setSchema("ds_trail");
 	}
 	catch (SQLException e)
 	{
