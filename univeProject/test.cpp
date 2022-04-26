@@ -27,20 +27,20 @@
 }
 
 
- /*vector<ResultSet*> test::dbvector() {
-	 
+ 
+ int test::countRowTable(string query) {
 	 ResultSet* result;
 	 PreparedStatement* pstmt;
-	 pstmt = con->prepareStatement("SELECT * FROM test_train");
+	 pstmt = con->prepareStatement(query);
 	 result = pstmt->executeQuery();
-	 vector<ResultSet*> V;
+	 int counter = 0;
 	 while (result->next())
 	 {
-		 v = result;
-
+		 counter++;
 	 }
-	 return v;
- }*/
+	 return counter;
+ }
+
 
 
 
@@ -56,17 +56,13 @@ void test::dbInsert(string query) {
 		cout << e.what() << endl;
 	}
 }
-ticket test::dbRetrieve(string query) {
+ResultSet* test::dbRetrieve() {
 	try {
        ResultSet* result;
 		PreparedStatement* pstmt;
-		pstmt = con->prepareStatement(query);
+		pstmt = con->prepareStatement("select * from passenger");
 		result = pstmt->executeQuery();
-		while (result->next())
-		{
-			ticket t = ticket(result->getString(1).c_str(), result->getString(2).c_str(), result->getString(3).c_str(), result->getString(4).c_str());
-			return t;
-		}
+		return result;
 		delete result;
 		delete pstmt;
 	
@@ -98,6 +94,19 @@ bool test::dbCompare(string email, string pass,string query)
 		
 	}
 	return false;
+}
+
+void test::dbUpdate(string query) 
+{
+	try {
+		PreparedStatement* pstmt;
+		pstmt = con->prepareStatement(query);
+		pstmt->executeQuery();
+		delete pstmt;
+	}
+	catch (SQLException e) {
+		cout << e.what() << endl;
+	}
 }
 
 void test::view(string query)

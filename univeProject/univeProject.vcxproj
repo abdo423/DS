@@ -124,21 +124,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="ticket.cpp" />
-    <ClCompile Include="update.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="test.h" />
-    <ClInclude Include="ticket.h" />
-    <ClInclude Include="update.h">
+    <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="test.h" />
+    <ClInclude Include="ticket.h" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="update.resx">
-      <DependentUpon>update.h</DependentUpon>
+    <EmbeddedResource Include="MyForm.resx">
+      <DependentUpon>MyForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="update.resx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,5 +1,12 @@
 #include "ticket.h"
 #include "test.h"
+using namespace System;
+using namespace System::ComponentModel;
+using namespace System::Collections;
+using namespace System::Windows::Forms;
+using namespace System::Data;
+using namespace System::Drawing;
+
 ticket::ticket()
 {
 }
@@ -11,22 +18,34 @@ ticket::ticket(string passeneger_name, string boarding_point, string destination
 	date_of_travel = date_of_travel;
 }
 
-void ticket::addTicket()
+void ticket::addTicket(string x,string y,string z,string l)
 {
-	
-	cin >> passeneger_name >> boarding_point >> destination_point >> date_of_travel;
+
+	//cin >> passeneger_name >> boarding_point >> destination_point >> date_of_travel;
 	//ticket t1 = ticket(passeneger_name, boarding_point, destination_point, date_of_travel);
 
 	test* passenger1 = new test();
-	passenger1->dbInsert("insert into passenger(passeneger_name, start_point, end_point, time_taken) values('"+passeneger_name+"', '"+boarding_point+"', '"+destination_point+"', '"+date_of_travel+"');");
+	passenger1->dbInsert("insert into passenger(passeneger_name, start_point, end_point, time_taken) values('" + x + "', '" + y + "', '" + z + "', '" + l +"');");
 }
-ticket ticket::displayTicket(string name)
+ResultSet* ticket::displayTicket()
 {
-	//passenger name
-	
-
 	test t;
-	ticket a=t.dbRetrieve("select * from passenger where passeneger_name = '"+name+"'");
-	return a;
+	ResultSet* result = t.dbRetrieve();
+	return result;
+}
+void ticket::updateTicket(string x, string y, string z, string l,string a)
+{
+	try {
+		test t;
+		t.dbUpdate("UPDATE 	passenger SET  passeneger_name = '"+x+"', start_point = '"+y+"',end_point='"+z+"',time_taken= '"+l+"' where passeneger_name='"+a+"'");
+	}
+	catch (SQLException e)
+	{
+		MessageBox::Show(gcnew String(e.what()));
+		cout << "Could not connect to server. Error message: " << e.what() << endl;
+		system("pause");
+		exit(1);
+	}
 
-} 
+}
+//strings refers to number of columns in database

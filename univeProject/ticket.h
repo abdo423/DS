@@ -1,5 +1,6 @@
 #include<iostream>
 #include <string>
+#include "test.h"
 using namespace std;
 
 
@@ -11,7 +12,8 @@ public:
 public:
 	ticket();
 	ticket(string passeneger_name, string boarding_point, string destination_point, string date_of_travel);
+	void updateTicket(string x, string y, string z, string l,string a);
+	void addTicket(string x,string y,string z,string l);
+	ResultSet *  displayTicket();
 
-	void addTicket();
-	ticket displayTicket(string name);
 };

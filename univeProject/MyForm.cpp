@@ -1,12 +1,18 @@
 #include "MyForm.h"
+
+
 using namespace std;
 using namespace System;
 using namespace System::Windows::Forms;
+using namespace univeProject;
 [STAThread]
-void main(cli::array<System::String^>^ args) {
+void main() {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	Application::Run(gcnew univeProject::MyForm);
+	Application::Run(gcnew univeProject::update);
+
+
 
 
 }
+

@@ -17,15 +17,20 @@ using namespace sql;
 		const string username = "root";
 		const string password = "Bodylovequran1";
 
+	
+	public:
 		Driver* driver;
 		Connection* con;
-	public:
 		test();
+		int countRowTable(string query);
+		//vector<ResultSet*> abdalla();
 		void dbInsert(string query);
 		/*vector<ResultSet*> dbvector();*/
-		ticket dbRetrieve(string query);
+		ResultSet * dbRetrieve();
 		bool dbCompare(string email,string pass,string query);
+		void dbUpdate(string query);
 		void view(string query);
+		
 		~test();
 	
 };
