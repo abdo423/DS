@@ -236,28 +236,56 @@ namespace univeProject {
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	ticket t;
 	test a;
+	int count = a.countRowTable("select * from passenger");
+	int counter = 0;
 	ResultSet* result;
 	result=t.displayTicket();
 
 	while (result->next())
 	{
-		if(gcnew String(result->getString(1).c_str()) == textBox5->Text)
+		if(gcnew String(result->getString(1).c_str()) != textBox5->Text)
 			
 			{
-				textBox1->Text = gcnew String(result->getString(1).c_str());
-				textBox2->Text = gcnew String(result->getString(2).c_str());
-				textBox3->Text = gcnew String(result->getString(3).c_str());
-				textBox4->Text = gcnew String(result->getString(4).c_str());
-				MessageBox::Show("Data has been viewed");
+			counter++;
 			}
 		
+		else if(gcnew String(result->getString(1).c_str()) == textBox5->Text)
+		{
+			textBox1->Text = gcnew String(result->getString(1).c_str());
+			textBox2->Text = gcnew String(result->getString(2).c_str());
+			textBox3->Text = gcnew String(result->getString(3).c_str());
+			textBox4->Text = gcnew String(result->getString(4).c_str());
+			MessageBox::Show("Data has been viewed");
 		
+		}
 	
 		
 	}
 
+		if(counter ==count )
+		{
+			MessageBox::Show("Data not found");
+		}
+	
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	if(textBox5->Text =="")
+	{
+		MessageBox::Show("you have to view data first");
+		textBox1->Clear();
+		textBox2->Clear();
+		textBox3->Clear();
+		textBox4->Clear();
+		return;
+	
+	}
+	else if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "" || textBox4->Text == ""  )
+	{
+		MessageBox::Show("please fill in all data fields");
+		return;
+	}
+
+	
 	ticket t;
 	t.updateTicket(msclr::interop::marshal_as<std::string>(textBox1->Text), msclr::interop::marshal_as<std::string>(textBox2->Text), msclr::interop::marshal_as<std::string>(textBox3->Text), msclr::interop::marshal_as<std::string>(textBox4->Text), msclr::interop::marshal_as<std::string>(textBox5->Text));
 	MessageBox::Show("updated successfully");
