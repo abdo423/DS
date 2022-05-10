@@ -25,7 +25,7 @@ void ticket::addTicket(string x,string y,string z,string l)
 	//ticket t1 = ticket(passeneger_name, boarding_point, destination_point, date_of_travel);
 
 	test* passenger1 = new test();
-	passenger1->dbInsert("insert into passenger(passeneger_name, start_point, end_point, time_taken) values('" + x + "', '" + y + "', '" + z + "', '" + l +"');");
+	passenger1->dbInsert("insert into passenger(passeneger_name, start_point, end_point, Date_of_travel) values('" + x + "', '" + y + "', '" + z + "', '" + l +"');");
 }
 ResultSet* ticket::displayTicket()
 {
@@ -37,7 +37,7 @@ void ticket::updateTicket(string x, string y, string z, string l,string a)
 {
 	try {
 		test t;
-		t.dbUpdate("UPDATE 	passenger SET  passeneger_name = '"+x+"', start_point = '"+y+"',end_point='"+z+"',time_taken= '"+l+"' where passeneger_name='"+a+"'");
+		t.dbUpdate("UPDATE 	passenger SET  passeneger_name = '"+x+"', start_point = '"+y+"',end_point='"+z+"',Date_of_travel= '"+l+"' where passeneger_name='"+a+"'");
 	}
 	catch (SQLException e)
 	{

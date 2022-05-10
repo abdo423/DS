@@ -3,17 +3,24 @@
 #include <msclr/marshal_cppstd.h>
 #include<string>
 #include<vector>
+using namespace System;
+using namespace System::ComponentModel;
+using namespace System::Collections;
+using namespace System::Windows::Forms;
+using namespace System::Data;
+using namespace System::Drawing;
+
  test::test()
 {
 	try
 	{
 		driver = get_driver_instance();
 		con = driver->connect(server, username, password);
-		con->setSchema("ds_trail");
+		con->setSchema("ds_trial");
 	}
 	catch (SQLException e)
 	{
-		cout << "Could not connect to server. Error message: " << e.what() << endl;
+		MessageBox::Show(gcnew String(e.what()));
 		system("pause");
 		exit(1);
 	}
